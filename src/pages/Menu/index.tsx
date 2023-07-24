@@ -9,6 +9,7 @@ import Sorter from './Sorter';
 const Menu = () => {
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState<number | null>(null);
+    const [sorter, setSorter] = useState('');
 
     return (
         <main>
@@ -22,7 +23,7 @@ const Menu = () => {
                 <Searcher search={search} setSearch={setSearch}/>
                 <div className={styles.billOfFare__filters}>
                     <Filters filter={filter} setFilter={setFilter}/>
-                    <Sorter />
+                    <Sorter sorter={sorter} setSorter={setSorter}/>
                 </div>
             </section>
         </main>
