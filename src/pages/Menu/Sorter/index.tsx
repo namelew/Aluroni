@@ -14,7 +14,7 @@ interface Props {
 
 const Sorter = ( { sorter, setSorter } : Props) => {
     const [open, setOpen] = useState(false);
-    const sorterName = sorter && options.find(option => option.value == sorter)?.name
+    const sorterName = sorter && options.find(option => option.value === sorter)?.name
 
     return (
         <button
