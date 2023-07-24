@@ -8,16 +8,16 @@ interface Props {
 }
 
 const Searcher = ( { search, setSearch } : Props) => {
-    return (
-        <div className={styles.searcher}>
-            <input 
-                value={search}
-                onChange={( event ) => { setSearch(event.target.value) }}
-                placeholder='Buscar'
-            />
-            <CgSearch size={20} color='#4D4D5E'/>
-        </div>
-    )
-}
+  return (
+    <div className={styles.searcher}>
+      <input 
+        value={search}
+        onChange={( event ) => { setSearch(event.target.value); }}
+        placeholder='Buscar'
+      />
+      <CgSearch size={20} color='#4D4D5E'/>
+    </div>
+  );
+};
 
 export default Searcher;

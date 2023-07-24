@@ -8,28 +8,28 @@ import Sorter, { SortOptions } from './Sorter';
 import List from './List';
 
 const Menu = () => {
-    const [search, setSearch] = useState('');
-    const [filter, setFilter] = useState<number | null>(null);
-    const [sorter, setSorter] = useState<SortOptions>('');
+  const [search, setSearch] = useState('');
+  const [filter, setFilter] = useState<number | null>(null);
+  const [sorter, setSorter] = useState<SortOptions>('');
 
-    return (
-        <main>
-            <nav className={styles.menu}>
-                <Logo />
-            </nav>
-            <Header>A casa do código e da massa</Header>
+  return (
+    <main>
+      <nav className={styles.menu}>
+        <Logo />
+      </nav>
+      <Header>A casa do código e da massa</Header>
 
-            <section className={styles.billOfFare}>
-                <h3 className={styles.billOfFare__title}>Cardápio</h3>
-                <Searcher search={search} setSearch={setSearch}/>
-                <div className={styles.billOfFare__filters}>
-                    <Filters filter={filter} setFilter={setFilter}/>
-                    <Sorter sorter={sorter} setSorter={setSorter}/>
-                </div>
-                <List search={search} filter={filter} sorter={sorter}/>
-            </section>
-        </main>
-    )
-}
+      <section className={styles.billOfFare}>
+        <h3 className={styles.billOfFare__title}>Cardápio</h3>
+        <Searcher search={search} setSearch={setSearch}/>
+        <div className={styles.billOfFare__filters}>
+          <Filters filter={filter} setFilter={setFilter}/>
+          <Sorter sorter={sorter} setSorter={setSorter}/>
+        </div>
+        <List search={search} filter={filter} sorter={sorter}/>
+      </section>
+    </main>
+  );
+};
 
 export default Menu;
