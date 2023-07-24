@@ -4,13 +4,13 @@ import styles from './Menu.module.scss';
 import { ReactComponent as Logo} from 'assets/logo.svg';
 import Searcher from './Searcher';
 import Filters from 'components/Filters';
-import Sorter from './Sorter';
+import Sorter, { SortOptions } from './Sorter';
 import List from './List';
 
 const Menu = () => {
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState<number | null>(null);
-    const [sorter, setSorter] = useState('');
+    const [sorter, setSorter] = useState<SortOptions>('');
 
     return (
         <main>

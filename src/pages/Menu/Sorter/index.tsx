@@ -4,9 +4,12 @@ import classNames from 'classnames';
 import styles from './Sorter.module.scss';
 import options from './options.json';
 
+
+export type SortOptions = '' | 'porcao' | 'qtd_pessoas' | 'preco';
+
 interface Props {
-    sorter: string,
-    setSorter: React.Dispatch<React.SetStateAction<string>>,
+    sorter: SortOptions,
+    setSorter: React.Dispatch<React.SetStateAction<SortOptions>>,
 }
 
 const Sorter = ( { sorter, setSorter } : Props) => {
@@ -32,7 +35,7 @@ const Sorter = ( { sorter, setSorter } : Props) => {
                     <div
                         className={styles.sorter__option}
                         key={option.value}
-                        onClick={ _ => setSorter(option.value) }
+                        onClick={ _ => setSorter(option.value as SortOptions) }
                     >
                         {option.name}
                     </div>
