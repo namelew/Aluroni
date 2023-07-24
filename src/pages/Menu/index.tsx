@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styles from './Menu.module.scss';
 import { ReactComponent as Logo} from 'assets/logo.svg';
 import Searcher from './Searcher';
-import Filters from './Filters';
+import Filters from 'components/Filters';
 
 const Menu = () => {
     const [search, setSearch] = useState('');
