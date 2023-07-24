@@ -5,6 +5,7 @@ import { ReactComponent as Logo} from 'assets/logo.svg';
 import Searcher from './Searcher';
 import Filters from 'components/Filters';
 import Sorter from './Sorter';
+import List from './List';
 
 const Menu = () => {
     const [search, setSearch] = useState('');
@@ -25,6 +26,7 @@ const Menu = () => {
                     <Filters filter={filter} setFilter={setFilter}/>
                     <Sorter sorter={sorter} setSorter={setSorter}/>
                 </div>
+                <List />
             </section>
         </main>
     )
