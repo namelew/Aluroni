@@ -7,6 +7,7 @@ import Filters from './Filters';
 
 const Menu = () => {
     const [search, setSearch] = useState('');
+    const [filter, setFilter] = useState<number | null>(null);
 
     return (
         <main>
@@ -19,7 +20,7 @@ const Menu = () => {
                 <h3 className={styles.billOfFare__title}>Cardápio</h3>
                 <Searcher search={search} setSearch={setSearch}/>
                 <div className={styles.billOfFare__filters}>
-                    <Filters/>
+                    <Filters filter={filter} setFilter={setFilter}/>
                 </div>
             </section>
         </main>
