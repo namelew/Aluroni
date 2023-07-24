@@ -12,7 +12,7 @@ const Header = ( { children } : Props) => {
                 {children}
             </div>
         </header>
-    )
+    );
 }
 
 export default Header;
