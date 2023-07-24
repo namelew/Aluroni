@@ -26,7 +26,7 @@ const Menu = () => {
                     <Filters filter={filter} setFilter={setFilter}/>
                     <Sorter sorter={sorter} setSorter={setSorter}/>
                 </div>
-                <List />
+                <List search={search} filter={filter} sorter={sorter}/>
             </section>
         </main>
     )
