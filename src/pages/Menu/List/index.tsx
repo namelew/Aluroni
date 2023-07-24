@@ -21,10 +21,23 @@ const List = ( { search, filter, sorter } : Props) => {
         return  filter === null || filter === id;
     }
 
+    const sort = (newList : typeof itens) => {
+        switch (sorter) {
+            case 'porcao': 
+                return newList.sort( (a, b) => a.size > b.size ? 1 : -1);
+            case 'qtd_pessoas':
+                return newList.sort( (a, b) => a.serving > b.serving ? 1 : -1);
+            case 'preco':
+                return newList.sort( (a, b) => a.price > b.price ? 1 : -1);
+            default:
+                return newList;
+        }
+    }
+
     useEffect(() => {
         const newList = itens.filter(item => testSearch(item.title) && testFilter(item.category.id));
-        setList(newList);
-    }, [search, filter]);
+        setList(sort(newList));
+    }, [search, filter, sorter]);
 
     return (
         <div className={styles.list}>
