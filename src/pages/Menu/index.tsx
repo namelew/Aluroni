@@ -4,6 +4,7 @@ import styles from './Menu.module.scss';
 import { ReactComponent as Logo} from 'assets/logo.svg';
 import Searcher from './Searcher';
 import Filters from 'components/Filters';
+import Sorter from './Sorter';
 
 const Menu = () => {
     const [search, setSearch] = useState('');
@@ -21,6 +22,7 @@ const Menu = () => {
                 <Searcher search={search} setSearch={setSearch}/>
                 <div className={styles.billOfFare__filters}>
                     <Filters filter={filter} setFilter={setFilter}/>
+                    <Sorter />
                 </div>
             </section>
         </main>
