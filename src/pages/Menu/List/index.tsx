@@ -6,7 +6,7 @@ const List = () => {
     return (
         <div className={styles.list}>
             {itens.map(item => (
-                <Item key={item.id}/>
+                <Item key={item.id} {...item}/>
             ))}
         </div>
     )
