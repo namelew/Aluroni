@@ -4,7 +4,6 @@ import styles from './FoodList.module.scss';
 import Searcher from './Searcher';
 import Filters from 'components/Filters';
 import Sorter, { SortOptions } from './Sorter';
-import Menu from 'components/Menu';
 import List from './List';
 
 const FoodList = () => {
@@ -14,7 +13,6 @@ const FoodList = () => {
 
     return (
         <main>
-            <Menu></Menu>
             <Header>A casa do código e da massa</Header>
 
             <section className={styles.billOfFare}>
