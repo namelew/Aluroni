@@ -1,5 +1,5 @@
 import Homepage from 'pages/Homepage';
-import Menu from 'pages/Menu';
+import FoodList from 'pages/FoodList';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const AppRouter = () => {
@@ -7,7 +7,7 @@ const AppRouter = () => {
         <Router>
             <Routes>
                 <Route path='/' element={<Homepage/>}/>
-                <Route path='/cardapio' element={<Menu/>}/>
+                <Route path='/cardapio' element={<FoodList/>}/>
             </Routes>
         </Router>
     );
