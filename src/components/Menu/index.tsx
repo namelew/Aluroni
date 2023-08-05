@@ -1,5 +1,6 @@
 import styles from './Menu.module.scss';
 import { ReactComponent as Logo} from 'assets/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const routes = [
@@ -22,9 +23,9 @@ const Menu = () => {
             <ul className={styles.menu__list}>
                 {routes.map((route, index) => (
                     <li key={index} className={styles.menu__link}>
-                        <a href={route.to}>
+                        <Link to={route.to}>
                             {route.label}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
