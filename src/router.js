@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from 'components/Menu';
 import DefaultPage from 'components/DefaultPage';
 import About from 'pages/About';
+import Footer from 'components/Footer';
+import NotFound from 'pages/NotFound';
 
 const AppRouter = () => {
     return (
@@ -16,7 +18,9 @@ const AppRouter = () => {
                         <Route path='cardapio' element={<FoodList/>}/>
                         <Route path='sobre' element={<About/>}/>
                     </Route>
+                    <Route path='*' element={<NotFound />}/>
                 </Routes>
+                <Footer/>
             </Router>
         </main>
     );
