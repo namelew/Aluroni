@@ -3,6 +3,7 @@ import FoodList from 'pages/FoodList';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from 'components/Menu';
 import DefaultPage from 'components/DefaultPage';
+import About from 'pages/About';
 
 const AppRouter = () => {
     return (
@@ -13,6 +14,7 @@ const AppRouter = () => {
                     <Route path='/' element={<DefaultPage></DefaultPage>}>
                         <Route index element={<Homepage/>}/>
                         <Route path='cardapio' element={<FoodList/>}/>
+                        <Route path='sobre' element={<About/>}/>
                     </Route>
                 </Routes>
             </Router>
