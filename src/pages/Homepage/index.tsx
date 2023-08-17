@@ -1,7 +1,6 @@
 import menu from 'data/bill-of-fare.json';
 import styles from './Homepage.module.scss';
 import tema from 'styles/Tema.module.scss';
-import OurHome from 'assets/nossa_casa.png';
 
 const Homepage = () => {
     const recommendations = [...menu].sort(() => 0.5 - Math.random()).splice(0,3);
@@ -22,7 +21,7 @@ const Homepage = () => {
             </div>
             <h3 className={tema.title}>Nossa casa</h3>
             <div className={styles.ourHome}>
-                <img src={OurHome} alt="casa do aluroni" />
+                <img src="assets/nossa_casa.png" alt="casa do aluroni" />
                 <div className={styles.ourHome__adress}>
                     Rua Verdeiro, 3185 <br/> <br/> Vila Mariana - SP
                 </div>
