@@ -2,6 +2,7 @@ import styles from './Dish.module.scss';
 import menu from 'data/bill-of-fare.json';
 import { useNavigate, useParams } from 'react-router-dom';
 import TagsDish from 'components/TagsDish';
+import NotFound from 'pages/NotFound';
 
 const Dish = () => {
     const { id } = useParams();
@@ -9,7 +10,7 @@ const Dish = () => {
     const dish = menu.find(item => item.id === Number(id));
 
     if (!dish) {
-        return '';
+        return <NotFound />;
     }
 
     return (
