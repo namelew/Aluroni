@@ -1,10 +1,12 @@
 import menu from 'data/bill-of-fare.json';
 import styles from './Homepage.module.scss';
 import theme from 'styles/Theme.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
     const recommendations = [...menu].sort(() => 0.5 - Math.random()).splice(0,3);
     //recommendations = recommendations.sort(() => 0.5 - Math.random()).splice(0,3);
+    const navigate = useNavigate();
 
     return (
         <section>
@@ -15,7 +17,10 @@ const Homepage = () => {
                         <div className={styles.recommendation__image}>
                             <img src={item.photo} alt={item.title}/>
                         </div>
-                        <button className={styles.recommendation__button}>Ver mais</button>
+                        <button 
+                            className={styles.recommendation__button}
+                            onClick={() => navigate(`/prato/${item.id}`, { state: {...item}})}
+                        >Ver mais</button>
                     </div>
                 ))}
             </div>
