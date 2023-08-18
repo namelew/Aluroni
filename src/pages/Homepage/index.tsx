@@ -12,14 +12,14 @@ const Homepage = () => {
         <section>
             <h3 className={theme.title}>Recomendações da cozinha</h3>
             <div className={styles.recommendations}>
-                {recommendations.map(item => (
-                    <div key={item.id} className={styles.recommendation}>
+                {recommendations.map(dish => (
+                    <div key={dish.id} className={styles.recommendation}>
                         <div className={styles.recommendation__image}>
-                            <img src={item.photo} alt={item.title}/>
+                            <img src={dish.photo} alt={dish.title}/>
                         </div>
                         <button 
                             className={styles.recommendation__button}
-                            onClick={() => navigate(`/prato/${item.id}`, { state: {...item}})}
+                            onClick={() => navigate(`/prato/${dish.id}`, { state: { dish }})}
                         >Ver mais</button>
                     </div>
                 ))}
