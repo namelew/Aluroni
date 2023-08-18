@@ -1,5 +1,5 @@
-@import 'styles/variables';
-@import 'styles/breakpoints';
+@import "styles/variables";
+@import "styles/breakpoints";
 
 $massas: #d73b3b;
 $carnes: #30201e;
@@ -18,7 +18,7 @@ $veganos: #80aa40;
   @media (max-width: $mobile) {
     justify-content: flex-start;
   }
-div {
+  > div {
     margin: 10px;
   }
   &__type {
@@ -30,30 +30,30 @@ div {
     justify-content: center;
     padding: 10px 30px;
     &__massas {
-        background-color: $massas;
-        color: white;
+      background-color: $massas;
+      color: white;
     }
     &__carnes {
-        background-color: $carnes;
-        color: white;
+      background-color: $carnes;
+      color: white;
     }
     &__combos {
-        background-color: $combos;
+      background-color: $combos;
     }
     &__veganos {
-        background-color: $veganos;
+      background-color: $veganos;
     }
   }
-  &__porcao,
-  &__qtdpessoas,
-  &__valor {
+  &__potion,
+  &__peopleAmount,
+  &__value {
     align-items: center;
     display: flex;
     font-size: 1.25rem;
     font-weight: bold;
     justify-content: center;
   }
-  &__valor {
+  &__value {
     color: $red;
     font-size: 1.7rem;
   }
