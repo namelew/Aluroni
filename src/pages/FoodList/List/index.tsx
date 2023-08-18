@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Item from './Item';
 import styles from './List.module.scss';
 import itens from 'data/bill-of-fare.json';
+import { Menu, Dish } from 'types/dish';
 
 interface Props {
     search: string,
@@ -10,11 +11,11 @@ interface Props {
 }
 
 const List = ( { search, filter, sorter } : Props) => {
-    const [list, setList] = useState(itens);
+    const [list, setList] = useState<Menu>(itens);
 
     const crescent = (
-        newList: typeof itens,
-        prop: keyof Pick<typeof itens[0], 'size' | 'serving' | 'price'>
+        newList: Menu,
+        prop: keyof Pick<Dish, 'size' | 'serving' | 'price'>
     ) => {
         return newList.sort((a, b) => (a[prop] > b[prop] ? 1 : -1));
     };
@@ -28,7 +29,7 @@ const List = ( { search, filter, sorter } : Props) => {
         return  filter === null || filter === id;
     };
 
-    const sort = (newList : typeof itens) => {
+    const sort = (newList : Menu) => {
         switch (sorter) {
         case 'porcao': 
             return crescent(newList, 'size');

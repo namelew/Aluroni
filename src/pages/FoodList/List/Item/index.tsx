@@ -1,10 +1,8 @@
 import classNames from 'classnames';
 import styles from './Item.module.scss';
-import items from 'data/bill-of-fare.json';
+import { Dish } from 'types/dish';
 
-type Props = typeof items[0];
-
-const Item = ( { title, description, category, size, serving, price, photo } : Props) => {
+const Item = ( { title, description, category, size, serving, price, photo } : Dish) => {
     return (
         <div className={styles.item}>
             <div className={styles.item__image}>
