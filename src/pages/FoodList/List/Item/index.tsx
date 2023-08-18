@@ -1,35 +1,19 @@
-import classNames from 'classnames';
 import styles from './Item.module.scss';
 import { Dish } from 'types/dish';
+import TagsDish from 'components/TagsDish';
 
-const Item = ( { title, description, category, size, serving, price, photo } : Dish) => {
+const Item = ( dish : Dish) => {
     return (
         <div className={styles.item}>
-            <div className={styles.item__image}>
-                <img src={photo} alt={title} />
+            <div className={styles.tags__image}>
+                <img src={dish.photo} alt={dish.title} />
             </div>
-            <div className={styles.item__description}>
-                <div className={styles.item__title}>
-                    <h2> {title} </h2>
-                    <p> {description} </p>
+            <div className={styles.tags__description}>
+                <div className={styles.tags__title}>
+                    <h2> {dish.title} </h2>
+                    <p> {dish.description} </p>
                 </div>
-                <div className={styles.item__tags}>
-                    <div className={classNames({
-                        [styles.item__type]: true,
-                        [styles[`item__type__${category.label.toLowerCase()}`]]: true,
-                    })}>
-                        {category.label}
-                    </div>
-                    <div className={styles.item__potion}>
-                        {size} g
-                    </div>
-                    <div className={styles.item__peopleAmount}>
-                        Serve {serving} pessoa{ serving === 1 ? '' : 's'}
-                    </div>
-                    <div className={styles.item__value}>
-                        R$ {price.toFixed(2)}
-                    </div>
-                </div>
+                <TagsDish {...dish}/>
             </div>
         </div>
     );
