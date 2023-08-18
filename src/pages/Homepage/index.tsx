@@ -1,6 +1,6 @@
 import menu from 'data/bill-of-fare.json';
 import styles from './Homepage.module.scss';
-import tema from 'styles/Tema.module.scss';
+import theme from 'styles/Theme.module.scss';
 
 const Homepage = () => {
     const recommendations = [...menu].sort(() => 0.5 - Math.random()).splice(0,3);
@@ -8,7 +8,7 @@ const Homepage = () => {
 
     return (
         <section>
-            <h3 className={tema.title}>Recomendações da cozinha</h3>
+            <h3 className={theme.title}>Recomendações da cozinha</h3>
             <div className={styles.recommendations}>
                 {recommendations.map(item => (
                     <div key={item.id} className={styles.recommendation}>
@@ -19,7 +19,7 @@ const Homepage = () => {
                     </div>
                 ))}
             </div>
-            <h3 className={tema.title}>Nossa casa</h3>
+            <h3 className={theme.title}>Nossa casa</h3>
             <div className={styles.ourHome}>
                 <img src="assets/nossa_casa.png" alt="casa do aluroni" />
                 <div className={styles.ourHome__adress}>

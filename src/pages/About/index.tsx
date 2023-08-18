@@ -1,5 +1,5 @@
 import styles from './About.module.scss';
-import tema from 'styles/Tema.module.scss';
+import theme from 'styles/Theme.module.scss';
 
 const images = [
     'assets/sobre/massa1.png',
@@ -9,7 +9,7 @@ const images = [
 const About = () => {
     return (
         <section>
-            <h3 className={tema.title}> Sobre </h3>
+            <h3 className={theme.title}> Sobre </h3>
             <div className={styles.aboutOurs}>
                 <img src="assets/sobre/casa.png" alt="Casa Aluroni" />
                 <div className={styles.aboutOurs__text}>

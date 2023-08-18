@@ -1,5 +1,5 @@
 import styles from './NotFound.module.scss';
-import tema from 'styles/Tema.module.scss';
+import theme from 'styles/Theme.module.scss';
 import { ReactComponent as NotFoundImg } from 'assets/not_found.svg';
 import classNames from 'classnames';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ const NotFound = () => {
     return (
         <div className={classNames({
             [styles.container]: true,
-            [tema.container]: true,
+            [theme.container]: true,
         })}>
             <div className={styles.back}>
                 <button onClick={() => { navigate(-1); }}>

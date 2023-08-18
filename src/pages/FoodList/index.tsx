@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './FoodList.module.scss';
-import tema from 'styles/Tema.module.scss';
+import theme from 'styles/Theme.module.scss';
 import Searcher from './Searcher';
 import Filters from 'components/Filters';
 import Sorter, { SortOptions } from './Sorter';
@@ -13,7 +13,7 @@ const FoodList = () => {
 
     return (
         <section className={styles.billOfFare}>
-            <h3 className={tema.title}>Cardápio</h3>
+            <h3 className={theme.title}>Cardápio</h3>
             <Searcher search={search} setSearch={setSearch}/>
             <div className={styles.billOfFare__filters}>
                 <Filters filter={filter} setFilter={setFilter}/>
